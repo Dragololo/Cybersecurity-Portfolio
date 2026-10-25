@@ -1,19 +1,52 @@
-# Cybersecurity Learning Portfolio
+# Cybersecurity Portfolio
 
-Documented writeups and portfolio work from my hands-on cybersecurity learning path. This repository tracks my progress through Hack The Box Academy labs and machines, alongside portfolio exercises from the Google Cybersecurity Certificate, as I build toward penetration testing and SOC analyst capability.
+A record of my hands-on cybersecurity training: labs, exercises, and writeups documented as I work through them. Each writeup shows what I did, the commands and output behind it, why I made each choice, and what I learned, including the dead ends.
 
-## What's Inside
+I'm building toward penetration testing and security analysis roles, and this repository is where I show my working.
 
-- **HTB Lab Writeups** — Starting Point, Machines, and Sherlock challenges, documenting enumeration, exploitation, and post-exploitation methodology
-- **HTB Academy Exercises** — hands-on skill assessments and end-of-module exercises across offensive and defensive security modules
-- **Google Cybersecurity Certificate Portfolio** — security audits, network structure analysis, incident handling journals, and other coursework projects
+## Credentials
 
+- **CompTIA Security+** (SY0-701)
+- **Google Cybersecurity Certificate**
 
-## Skills Covered
+## What's Here
 
-Enumeration and reconnaissance, web application exploitation, Active Directory attacks, privilege escalation, network traffic analysis, log analysis, and SOC triage workflows. Tools include Nmap, Burp Suite, Metasploit, Wireshark, and the broader Linux/Windows command-line toolset.
+Everything I've documented from my learning journey: training platform modules, lab machines, challenges, and exercises across offensive and defensive security. Work is organised by platform, then by course or path, then by module:
 
-## Certifications in Progress
+```
+<Platform>/
+└── <Course or Path>/
+    └── <Module>/
+        ├── 1. <Section>.md
+        ├── 2. <Section>.md
+        └── img/
+```
 
-- CompTIA Security+ (SY0-701)
-- Google Cybersecurity Certificate
+Browse the folders to see what's covered. The repository grows as I complete new material.
+
+> **Work in progress:** I'm in the middle of migrating my notes from a personal Obsidian vault, redacting and cleaning each writeup as it moves over. Some of my completed work isn't here yet, and new modules will keep appearing.
+
+## How Writeups Are Written
+
+Each exercise follows a consistent pattern, so any writeup is quick to scan:
+
+1. **Question and context**: what was asked and what the target looked like.
+2. **Approach**: how I analysed the problem and why I chose the tools and options I did.
+3. **Commands and output**: the full command with real tool output, trimmed with `—SNIP—` where it adds nothing.
+4. **Breakdown**: what each flag or step does.
+5. **Result and takeaways**: what the output means and what went wrong along the way.
+
+Screenshots have descriptive filenames and alt text.
+
+## Redactions
+
+All work here was done on authorised, intentionally vulnerable lab environments. Some content is redacted and shown as `—REDACTED—`:
+
+- **Flags and answers.** Training platforms such as Hack The Box ask that solutions to their course material not be published. The method and the reasoning are what I'm sharing.
+- **Personal identifiers.** My usernames and local file paths are removed from terminal output and screenshots.
+
+Lab IP addresses and sample data come from temporary training environments and are not sensitive.
+
+## Disclaimer
+
+Everything in this repository was performed in legal training environments for educational purposes. Don't use these techniques against systems you don't own or have explicit permission to test.
