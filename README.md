@@ -6,19 +6,22 @@ I'm building toward penetration testing and security analysis roles, and this re
 
 ## Credentials
 
-- **CompTIA Security+** (SY0-701)
+- **CompTIA Security+**
 - **Google Cybersecurity Certificate**
 
 ## What's Here
 
-Everything I've documented from my learning journey: training platform modules, lab machines, challenges, and exercises across offensive and defensive security. Work is organised by platform, then by course or path, then by module:
+Everything I've documented from my learning journey: training platform modules, lab machines, challenges, and exercises across offensive and defensive security. Work is organised by platform, then by course, path or category, then by module, lab or challenge. Each module, lab or challenge has its own folder holding its writeups and its own `img/` folder for screenshots:
 
 ```
 <Platform>/
-└── <Course or Path>/
-    └── <Module>/
-        ├── 1. <Section>.md
-        ├── 2. <Section>.md
+└── <Course, Path or Category>/
+    ├── <Module>/
+    │   ├── 1. <Section>.md
+    │   ├── 2. <Section>.md
+    │   └── img/
+    └── <Lab or Challenge>/
+        ├── <Writeup>.md
         └── img/
 ```
 
