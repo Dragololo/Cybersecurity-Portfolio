@@ -10,8 +10,6 @@ Opened the web app at `http://10.114.136.128/`. The board loads with White to mo
 
 ![The Endgame Trainer web app showing a back-rank mate-in-one position with White to move.](./img/foolsmate-initial-board.png)
 
-Asked for a hint before going further, since the setup (an engine insisting mate-in-one "isn't" mate) smelled like a client-side validation bypass.
-
 ## Client-Side Discovery
 
 Playing the mating move on the board didn't produce a checkmate — instead a dialog popped up: "I'll shut down your PC if you play that."
