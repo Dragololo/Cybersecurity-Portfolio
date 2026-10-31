@@ -218,7 +218,7 @@ Tried reaching it via a path-traversal instead of the shell once more:
 http://10.113.131.5/../../../../home/rick/second+ingredients
 ```
 
-That failed, and switching the `+` to `%20` failed too. Both attempts were a dead end for the same underlying reason: browsers normalise leading `../` segments out of an absolute URL path before the request is even sent, since there’s nothing above the root to traverse to — so the request that actually reached Apache was for `/home/rick/second+ingredients`, which doesn’t exist under the web root. This wasn’t a viable route to begin with: a `../` sequence typed into the address bar can’t escape the document root this way, regardless of encoding. Dropped this approach and went back to the shell.
+That failed, and switching the `+` to `%20` failed too. Dropped this approach and went back to the shell.
 
 Went back to the shell and tried to find out exactly which commands the panel blocks, using `grep`with a single space as the search pattern — since nearly every non-empty line contains a space, this recursively dumps the raw contents of every file in the current directory, including PHP source that would otherwise just get executed and rendered if requested over HTTP:
 
