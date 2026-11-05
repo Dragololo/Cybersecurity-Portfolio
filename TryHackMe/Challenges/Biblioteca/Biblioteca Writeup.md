@@ -560,7 +560,7 @@ User hazel may run the following commands on ip-10-112-175-21:
     (root) SETENV: NOPASSWD: /usr/bin/python3 /home/hazel/hasher.py
 ```
 
-`hazel` can run exactly one command as root, with no password required: `/usr/bin/python3 /home/hazel/hasher.py`. The `SETENV` tag is the key detail — it means sudo will pass through environment variables set by `hazel`, rather than stripping them, when running that command.
+The output listed `(root) SETENV: NOPASSWD: /usr/bin/python3 /home/hazel/hasher.py` as something hazel could run via sudo. At this point, neither the significance of the `SETENV` tag nor the fact that `/usr/bin/python3 /home/hazel/hasher.py` was one single permitted command, rather than `python3` in general, was understood; I had misread; that only became clear later.
 
 ### Investigating hasher.py
 
@@ -616,7 +616,8 @@ Sorry, user hazel is not allowed to execute '/usr/bin/python3 -c import os; os.e
 - `python3` invokes the Python 3 interpreter
 - `-c 'import os; os.execl("/bin/sh", "sh")'` runs the given code inline rather than from a script file; the code imports `os` and replaces the current process image with `/bin/sh`
 
-This failed: the sudoers entry only permits the exact command `/usr/bin/python3 /home/hazel/hasher.py`, not arbitrary `python3 -c` invocations. Dead end — the standard GTFOBins shell-escape doesn't apply here.
+This failed, with sudo reporting that hazel wasn't allowed to execute `python3 -c import os; os.execl("/bin/sh", "sh")` as root. The standard GTFOBins shell-escape didn't work, though the reason wasn't clear at the time — the `sudo -l` line was still being read as permitting `python3` generally, not as one fixed command.
+
 ### Researching SETENV and Python Library Hijacking
 
 Searched for how `SETENV` specifically can be abused for privilege escalation.
@@ -628,6 +629,8 @@ This pointed towards Python library hijacking: abusing `PYTHONPATH` to make a pr
 ![A search result defining Python library hijacking and the three conditions that make a target exploitable.](./img/biblioteca-python-library-hijacking-explanation.png)
 
 Read further on the mechanism at a blog post ([Isha Sangpal, "Linux Privilege Escalation: Python Library Hijacking", Medium](https://medium.com/@betigetin/linux-privilege-escalation-python-library-hijacking-f5030d50ddcd)), which explains that when Python resolves an `import`, it searches the directories in `sys.path` in order and loads the first matching filename it finds. Python checks the current working directory first, then `PYTHONPATH` entries, then the standard library and site-packages directories.
+
+Rereading the earlier `sudo -l` output after this, it became clear here at this moment in time that `/usr/bin/python3 /home/hazel/hasher.py` was one single permitted command, not `python3` on its own — which explained why the GTFOBins shell-escape had been refused.
 
 ![A search result listing Python's module search path order, with the current working directory checked first.](./img/biblioteca-python-sys-path-order.png)
 
