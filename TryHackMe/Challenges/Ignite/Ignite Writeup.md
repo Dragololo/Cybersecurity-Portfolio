@@ -206,7 +206,7 @@ www-data@ubuntu:/var/www/html$ stty rows 52 columns 236
 With a working shell as `www-data`, I looked for the flag:
 
 ```shell
-www-data@ubuntu:/var/www/html/fuel/application/config$ find / -type f -name *.txt 2>/dev/null | grep -i user
+www-data@ubuntu:/var/www/html$ find / -type f -name *.txt 2>/dev/null | grep -i user
 
 /usr/share/doc/hplip/users-guide.txt
 ```
@@ -214,7 +214,7 @@ www-data@ubuntu:/var/www/html/fuel/application/config$ find / -type f -name *.tx
 This came back with nothing relevant. At the time, I assumed the flag files simply sat in a directory `www-data` couldn't read, so I tried the same search with `sudo`:
 
 ```shell
-www-data@ubuntu:/var/www/html/fuel/application/config$ sudo find / -type f -name *.txt 2>/dev/null | grep -i user
+www-data@ubuntu:/var/www/html$ sudo find / -type f -name *.txt 2>/dev/null | grep -i user
 
 [sudo] password for www-data: 
 [sudo] password for www-data: 
