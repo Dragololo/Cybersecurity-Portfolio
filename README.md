@@ -27,7 +27,7 @@ Everything I've documented from my learning journey: training platform modules, 
 
 Browse the folders to see what's covered. The repository grows as I complete new material.
 
-> **Work in progress:** I'm in the middle of migrating my notes from a personal Obsidian vault, redacting and cleaning each writeup as it moves over. Some of my completed work isn't here yet, and new modules will keep appearing.
+> **Work in progress:** I'm in the middle of migrating my notes from a personal Obsidian vault, redacting and cleaning each writeup as it moves over. Most of my completed work isn't here yet, and new modules will keep appearing.
 
 ## How Writeups Are Written
 
