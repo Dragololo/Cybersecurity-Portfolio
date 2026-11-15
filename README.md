@@ -6,8 +6,8 @@ I'm building toward penetration testing and security analysis roles, and this re
 
 ## Credentials
 
-- **CompTIA Security+**
-- **Google Cybersecurity Certificate**
+- [**CompTIA Security+**](https://cp.certmetrics.com/comptia/en/public/verify/credential/8f29df7c0fbf419eb27ae0a69e4ba5ca)
+- [**Google Cybersecurity Certificate**](https://www.coursera.org/account/accomplishments/professional-cert/UCIP5SYOS8D5)
 
 ## What's Here
 
