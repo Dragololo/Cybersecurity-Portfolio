@@ -233,11 +233,6 @@ The hash decoded to the string `false`, which meant the cookie was gating someth
 b326b5062b2f0e69046810717534cb09 
 ```
 
-**Breakdown:**
-
-- `echo -n 'true'` prints the literal string `true`, with `-n` suppressing the trailing newline so it isn't hashed along with it
-- `| md5sum` pipes that string into `md5sum`, which outputs its MD5 digest
-
 After reloading the dashboard with `isITUser` set to that hash, a "View API" button appeared that hadn't been there before.
 
 ![Cookie-Editor with the isITUser value replaced by the MD5 hash of true.](./img/support-cookie-isituser-tampered.png)
