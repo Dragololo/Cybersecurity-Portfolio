@@ -30,12 +30,6 @@ PORT   STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 16.04 seconds
 ```
 
-**Breakdown:**
-
-- `10.114.177.123` sets the scan target, the lab's IP address
-- `-p-` scans all 65,535 TCP ports rather than Nmap's default top-1000
-- `-T4` sets the timing template to "aggressive", speeding the scan up on a responsive network
-
 Only SSH and HTTP were open, so I followed up with a version and script scan against just those two ports.
 
 ```shell
@@ -62,13 +56,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 8.62 seconds
 ```
-
-**Breakdown:**
-
-- `10.114.177.123` is the target
-- `-p22,80` restricts the scan to the two open ports found in the full scan
-- `-sV` probes each open port to fingerprint the service and its version
-- `-sC` runs Nmap's default set of safe scripts against the open ports, which here pulled the SSH host keys, the Apache/PHP title, and a note that the `PHPSESSID` cookie had no `httponly` flag set
 
 The `http-title` pointed me at a web app called "Support Operations Panel", so I went to look at the site itself.
 
