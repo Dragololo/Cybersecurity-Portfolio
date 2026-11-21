@@ -308,9 +308,6 @@ I sent `ls` :
 `secret.conf`, sitting right in the current working directory, remonstrated me for my tunnel-vision. 
 
 ```shell
-$ ping -c 2 -W 1 127.0.0.1 cat secret.conf
-
-ping: 127.0.0.1
 : Name or service not known
 # netops application config
 # generated: 2026-01-03
