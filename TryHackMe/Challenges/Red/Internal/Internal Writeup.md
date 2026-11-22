@@ -1,27 +1,21 @@
 ## Scenario
 
-> A client that wants a penetration test conducted on an environment.
+>You have been assigned to a client that wants a penetration test conducted on an environment due to be released to production in three weeks.
+>
+> **Scope of Work**
 > 
-> Scope
+> The client requests that an engineer conducts an external, web app, and internal assessment of the provided virtual environment. The client has asked that minimal information be provided about the assessment, wanting the engagement conducted from the eyes of a malicious actor (black box penetration test).  The client has asked that you secure two flags (no location provided) as proof of exploitation:
 > 
-> You must conduct an external, web app, and internal assessment of the provided virtual environment. This is a black box penetration testing assignment. Minimal information is provided; you must conducted the attack from the eyes of a malicious actor. You must secure two flags as proof of exploitation:
-> 
-> ```
-> User.txt  
-> Root.txt  
-> ```
+> - User.txt
+> - Root.txt  
 > 
 > Additionally, the client has provided the following scope allowances:
 > 
-> ```
-> Ensure that you modify your hosts file to reflect internal.thm  
-> Any tools or techniques are permitted in this engagement  
-> Locate and note all vulnerabilities found  
-> Submit the flags discovered to the dashboard  
-> Only the IP address assigned to your machine is in scope  
-> ```
-> 
-> Secure the User and Root flags and submit them to the dashboard as proof of exploitation.
+> - Ensure that you modify your hosts file to reflect internal.thm
+> - Any tools or techniques are permitted in this engagement
+> - Locate and note all vulnerabilities found
+> - Submit the flags discovered to the dashboard
+> - Only the IP address assigned to your machine is in scope
 
 Access via: `10.114.168.23`
 
