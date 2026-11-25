@@ -110,6 +110,8 @@ There was indeed something embedded in the rabbit image.
 
 **Note:** the passphrase prompt didn't actually give me a chance to type anything before steghide found the embedded file. My guess was that this is just how steghide behaves when there's no passphrase set, though I wasn't sure.
 
+> **Edit:** I have since figured out that this is in fact not the case. After answering the prompt `Try to get information about embedded data ?` with a `y`, the tool immediately continues into the `Enter passphrase` prompt without requiring the user to hit `Enter`; thus, when I had typed `y` and hit the `Enter` key, I was unwittingly skipping pass the passphrase prompt each time, with the tool then correctly treating my input as "No passphrase."  
+
 Ran the same command for the rest of the images. 
 
 ```shell
